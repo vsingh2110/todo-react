@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PencilIcon, CheckIcon } from '@heroicons/react/24/solid';
+import { PencilIcon, CheckIcon,TrashIcon } from '@heroicons/react/24/solid';
 
 function TodoItem({ todo, onDelete, onToggle, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -65,7 +65,7 @@ function TodoItem({ todo, onDelete, onToggle, onEdit }) {
           onClick={() => onDelete(todo.id)}
           className="text-red-500 hover:text-red-600 focus:outline-none"
         >
-          Delete
+          <TrashIcon className="h-5 w-5" />
         </button>
       </div>
     </div>
